@@ -18,7 +18,7 @@ JS
 ===
 ``getInfoDropDown``
 ===
-send **GET Request** through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
+send `GET Request` through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
 Where ``endpoint_name`` is replaced with the appropriate endpoint:
 ```
 - academicYear
@@ -29,7 +29,7 @@ Where ``endpoint_name`` is replaced with the appropriate endpoint:
 - module
 - lecturer
 ```
-The `data`* received from each **GET Request** will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
+The `data` received from each `GET Request` will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
 Where ``#`` represents ID and  ``ID_Name``s are that ID we name in the html page.
 
 ``AllQuestionnaireChart``
@@ -72,7 +72,7 @@ send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Parameter:** 
 + i (loop 18 times for 18 questions)
 
-**Return** `data` ("Never","Rarely", "Sometimes", "Often", "Always"), `Chart_Questions(i,data)` 
+**Return** `data`, `Chart_Questions(i,data)` 
 
 `Chart_Question(i,data)`
 ---
