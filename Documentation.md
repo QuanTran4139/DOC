@@ -2,7 +2,6 @@ Visualize
 ===
 
 HTML
-
 ===
 
 Contains 7 drop down list (no value, unique ID)
@@ -23,13 +22,11 @@ JS
 ===
 
 ``getInfoDropDown``
-
 ===
 
 Send `GET Request` through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
 
 Where ``endpoint_name`` is replaced with the appropriate endpoint:
-
 ```
 - academicYear
 - semester
@@ -45,7 +42,6 @@ The `data` received from each `GET Request` will be send to the appropriate ``ID
 Where ``#`` represents ID and  ``ID_Name``s are the name we put in the html page.
 
 ``getComments``
-
 ===
 
 When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not chosen, nothing happen.
@@ -56,7 +52,6 @@ Otherwise, it will execute the following:
 
 
 ``AllQuestionnaireChart``
-
 ===
 
 After chosing `value` (optional) from 7 drop down lists in HTML (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work
@@ -68,7 +63,6 @@ example:
 When ``Visualize`` button is clicked, the chosen `value`s (optional) from 7 drop down lists will be used for ``GET Request`` inside these functions:
 
 `get_Total_Count()`
-
 ---
 
 Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
@@ -78,7 +72,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponse
 **Return** `data` (total number of students)
 
 `get_Gender()`
-
 ---
 
 Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=gender"`\
@@ -88,7 +81,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` +
 **Return** `data` (students participate in evaluation), `Chart_Gender(data)`
 
 `Chart_Gender(data)`
-
 ---
 
 **Parameter:** 
@@ -97,7 +89,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` +
 **Return** `Display Chart on HTML by accessing the gender's unique ID`
 
 `get_Question(i)`
-
 ---
 
 Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=i"`\
@@ -107,7 +98,6 @@ Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Return** `data`, `Chart_Questions(i,data)` 
 
 `Chart_Question(i,data)`
-
 ---
 
 **Parameter:**
@@ -117,7 +107,6 @@ Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Return** `Display Chart on HTML by accessing the question's unique ID`
 
 `Chart_Total()`
-
 ---
 
 Access data from get_Question(i) and sum all data for 18 questions
