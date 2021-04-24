@@ -96,5 +96,5 @@ Access data from get_Question(i) and sum all data for 18 questions
 When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not chosen, nothing happen.
 
 Otherwise, it will execute the following:
-+ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getComments"` + `value`
++ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getComments&"` + `value`
 + display the comments on HTML by accessing the comment space unique ID
