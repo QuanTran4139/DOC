@@ -29,8 +29,8 @@ Where ``endpoint_name`` is replaced with the appropriate endpoint:
 - module
 - lecturer
 ```
-The `data` received from each `GET Request` will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
-Where ``#`` represents ID and  ``ID_Name``s are that ID we name in the html page.
+The `data` received from each `GET Request` will be send to the appropriate ``ID_Name`` in the HTML in the form of drop down list using $("``#ID_Name``").
+Where ``#`` represents ID and  ``ID_Name``s are the name we put in the html page.
 
 ``AllQuestionnaireChart``
 ===
