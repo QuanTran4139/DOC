@@ -18,7 +18,7 @@ JS
 ===
 ``getInfoDropDown``
 ===
-send `GET Request` through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
+Send `GET Request` through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
 Where ``endpoint_name`` is replaced with the appropriate endpoint:
 ```
 - academicYear
@@ -45,7 +45,7 @@ When ``Visualize`` button is clicked, the chosen `value`s (optional) from 7 drop
 `get_Total_Count()`
 ---
 
-send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
+Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
 **Parameter:**
 + None
 
@@ -53,7 +53,7 @@ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponse
 
 `get_Gender()`
 ---
-send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=gender"`\
+Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=gender"`\
 **Parameter:**
 + None
 
@@ -68,7 +68,7 @@ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` +
 
 `get_Question(i)`
 ---
-send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=i"`\
+Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=i"`\
 **Parameter:** 
 + i (loop 18 times for 18 questions)
 
@@ -84,7 +84,7 @@ send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 
 `Chart_Total()`
 ---
-access data from get_Question(i) and sum all data for 18 questions
+Access data from get_Question(i) and sum all data for 18 questions
 
 **Parameter:** 
 + None
@@ -97,4 +97,4 @@ When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not
 
 Otherwise, it will execute the following:
 + send `GET Request` with `"/Questionnaire/api/questionnaire?action=getComments"` + `value`
-+ Display the comments on HTML by accessing the comment space unique ID
++ display the comments on HTML by accessing the comment space unique ID
