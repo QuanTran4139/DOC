@@ -84,7 +84,7 @@ send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 
 `Chart_Total()`
 ---
-access data from get_Question(i) and sum all data
+access data from get_Question(i) and sum all data for 18 questions
 
 **Parameter:** 
 + None
