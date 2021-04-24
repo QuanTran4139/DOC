@@ -30,20 +30,25 @@ Where ``endpoint_name`` is replaced with the appropriate endpoint:
 - lecturer
 ```
 The *data* received from each **GET Request** will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
-Where ``#`` represents ID and  ``ID_Name``s are that ID we name in the html page.
+Where ``#`` represents ID and  ``ID_Name``s are that ID we name in the html page.\
+
 ``AllQuestionnaireChart``
 ===
-After chosing *data*s `(optional)` from 7 drop down lists (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work:
-example:\
+After chosing *data*s `(optional)` from 7 drop down lists (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work\
+example:
 - ~~Academic Year: 2002-2003 Semester: WS04~~\
 -  [x] Academic Year:2002-2003 Semester: WS03\
 
 When ``Visualize`` button is clicked, the chosen *data*s `(optional)` from 7 drop down lists will be used for ``GET Request`` inside these functions:\
--``get_Total_Count()``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&" + data`\
+
+``get_Total_Count()``:
 ---
-parameter
+send **GET Request** with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&" + data`\
+Parameter: None.\
+Return total number of students.
 ---
-#### ``get_Gender()``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&" + data + "q=gender"` to get number of students participate in evaluation,send data to Chart_Gender
+
+``get_Gender()``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&" + data + "q=gender"` to get number of students participate in evaluation,send data to Chart_Gender
 
 #### ``Chart_Gender()``: receive data from ``get_Gender`` to draw a chart
 
