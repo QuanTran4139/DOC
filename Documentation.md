@@ -38,6 +38,7 @@ example:\
 
 When ``Visualize`` button is clicked, the chosen *data*s `(optional)` from 7 drop down lists will be used for ``GET Request`` inside these functions:\
 -``get_Total_Count()``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&" + data` to get total number of students 
+
 -``get_Gender()``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&" + data + "q=gender"` to get number of students participate in evaluation,send data to Chart_Gender
 
 -``Chart_Gender()``: receive data from ``get_Gender`` to draw a chart
@@ -45,4 +46,5 @@ When ``Visualize`` button is clicked, the chosen *data*s `(optional)` from 7 dro
 -``get_Question(i)``: send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"+ data + "q=i"` ***(loop i 18 times for 18 questions)*** to get answers ``"Never","Rarely", "Sometimes", "Often", "Always"`` from the Responsdents and send data to Chart_Question(i,data) (create and store each answer in separate variable array and sum up for 18 questions) 
 
 -``Chart_Question(i,data)``: receive data from ``get_Question(i)``***(Also loop 18 times)*** to draw a chart and display to browser by getting the ID ``#`` of the question, also use data from ``get_Gender()`` and ``get_Total_Count()`` to calculate mean, standard deviation, ResponseRate and number of Respondents answer the question
+
 -``Chart_Total()``: access variable array for each answer from ``get_Question(i)`` to get total answers for 18 questions and draw a chart and display to browser by getting the ID ``#`` of the totalAnswer
