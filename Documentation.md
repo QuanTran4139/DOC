@@ -46,37 +46,36 @@ When ``Visualize`` button is clicked, the chosen *value*s `(optional)` from 7 dr
 send GET Request with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&" + value`\
 **Parameter:** None\
 **Return** `data` (total number of students)
----
 
 `get_Gender()`
 ---
 send GET Request with `"/Questionnaire/api/questionnaire?action=getCounts&" + value + "q=gender"`
 **Parameter:** None
 Return `data` (students participate in evaluation), `Chart_Gender(data)`
----
+
 `Chart_Gender(data)`
 ---
 **Parameter:** data from get_Gender()
 Return `Display Chart on HTML by accessing the gender's unique ID`
----
+
 `get_Question(i)`
 ---
 send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"+ value + "q=i"`
 **Parameter:** i loop (18 times for 18 questions)
 **Return:** `data` ("Never","Rarely", "Sometimes", "Often", "Always"), `Chart_Questions(i,data)` 
----
+
 `Chart_Question(i,data)`
 ---
 **Parameter:**
 + `i` loop (18 times for 18 questions)
 + `data` loop (18 times for 18 questions)
 **Return:** `Display Chart on HTML by accessing the question's unique ID`
----
+
 `Chart_Total()`
 ---
 **Parameter:** None
 **Return:** `Display Chart on HTML by accessing the totalAnswer's unique ID`
----
+
 ``getComments``
 ===
 When ``Visualize`` button is clicked, if ``data`` from Class and Lecturer are not chosen, nothing happen. Otherwise, it will execute the following:
