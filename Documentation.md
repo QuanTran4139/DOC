@@ -17,7 +17,7 @@ A ``Visualize`` button, a totalAnswer(unique ID), gender(UniqueID, 18 questions(
 JS
 ===
 ``getInfoDropDown``
----
+===
 send **GET Request** through API using ajax with the following format:``/Questionnaire/api/endpoint_name?action=dump``.
 Where ``endpoint_name`` is replaced with the appropriate endpoint:
 ```
