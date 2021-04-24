@@ -32,6 +32,15 @@ Where ``endpoint_name`` is replaced with the appropriate endpoint:
 The `data` received from each `GET Request` will be send to the appropriate ``ID_Name`` in the HTML in the form of drop down list using $("``#ID_Name``").
 Where ``#`` represents ID and  ``ID_Name``s are the name we put in the html page.
 
+``getComments``
+===
+When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not chosen, nothing happen.
+
+Otherwise, it will execute the following:
++ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getComments&"` + `value`
++ display the comments on HTML by accessing the comment space unique ID
+
+
 ``AllQuestionnaireChart``
 ===
 After chosing `value` (optional) from 7 drop down lists in HTML (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work
@@ -90,11 +99,3 @@ Access data from get_Question(i) and sum all data for 18 questions
 + None
 
 **Return** `Display Chart on HTML by accessing the totalAnswer's unique ID`
-
-``getComments``
-===
-When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not chosen, nothing happen.
-
-Otherwise, it will execute the following:
-+ send `GET Request` with `"/Questionnaire/api/questionnaire?action=getComments&"` + `value`
-+ display the comments on HTML by accessing the comment space unique ID
