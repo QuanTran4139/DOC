@@ -29,27 +29,27 @@ Where ``endpoint_name`` is replaced with the appropriate endpoint:
 - module
 - lecturer
 ```
-The *data* received from each **GET Request** will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
+The `data`* received from each **GET Request** will be send to the appropriate ``ID_Name`` on the browser in the form of drop down list using $("``#ID_Name``").
 Where ``#`` represents ID and  ``ID_Name``s are that ID we name in the html page.\
 
 ``AllQuestionnaireChart``
 ===
-After chosing *data*s `(optional)` from 7 drop down lists in HTML (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work\
+After chosing `value` (optional) from 7 drop down lists in HTML (recommend chossing at least 1), if choose more than 1, must have the right combination,otherwise the ``Visualize`` button won't work\
 example:
 - ~~Academic Year: 2002-2003 Semester: WS04~~\
 -  [x] Academic Year:2002-2003 Semester: WS03\
 
-When ``Visualize`` button is clicked, the chosen *value*s `(optional)` from 7 drop down lists will be used for ``GET Request`` inside these functions:\
+When ``Visualize`` button is clicked, the chosen `value`s (optional) from 7 drop down lists will be used for ``GET Request`` inside these functions:\
 
 `get_Total_Count()`
 ---
-send GET Request with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&" + value`\
+send GET Request with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
 **Parameter:** None\
 **Return** `data` (total number of students)
 
 `get_Gender()`
 ---
-send GET Request with `"/Questionnaire/api/questionnaire?action=getCounts&" + value + "q=gender"`
+send GET Request with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=gender"`
 **Parameter:** None
 Return `data` (students participate in evaluation), `Chart_Gender(data)`
 
@@ -60,7 +60,7 @@ Return `Display Chart on HTML by accessing the gender's unique ID`
 
 `get_Question(i)`
 ---
-send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"+ value + "q=i"`
+send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=i"`
 **Parameter:** i loop (18 times for 18 questions)
 **Return:** `data` ("Never","Rarely", "Sometimes", "Often", "Always"), `Chart_Questions(i,data)` 
 
@@ -78,6 +78,7 @@ send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"+
 
 ``getComments``
 ===
-When ``Visualize`` button is clicked, if ``data`` from Class and Lecturer are not chosen, nothing happen. Otherwise, it will execute the following:
-- send`` GET Request`` with ``"/Questionnaire/api/questionnaire?action=getComments" + data``
+When ``Visualize`` button is clicked, if `value` from Class and Lecturer are not chosen, nothing happen.\
+Otherwise, it will execute the following:
+- send`` GET Request`` with `"/Questionnaire/api/questionnaire?action=getComments"` + `value`
 - Display the comments on HTML by accessing the comment space unique ID
