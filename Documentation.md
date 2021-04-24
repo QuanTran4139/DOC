@@ -45,7 +45,8 @@ When ``Visualize`` button is clicked, the chosen `value`s (optional) from 7 drop
 ---
 
 send GET Request with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
-**Parameter:** None
+**Parameter:**
++ None
 
 **Return** `data` (total number of students)
 
@@ -70,7 +71,8 @@ send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Parameter:** 
 + i loop (18 times for 18 questions)
 
-**Return** `data` ("Never","Rarely", "Sometimes", "Often", "Always"), `Chart_Questions(i,data)` \
+**Return** `data` ("Never","Rarely", "Sometimes", "Often", "Always"), `Chart_Questions(i,data)` 
+
 `Chart_Question(i,data)`
 ---
 **Parameter:**
