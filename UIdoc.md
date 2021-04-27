@@ -115,7 +115,6 @@ example:
 When ``Visualize`` button is clicked, the chosen `value`s (optional) from 7 drop down lists will be used for ``GET Request`` inside these functions:
 
 ### get_Total_Count()
----
 
 Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponseCount&"` + `value`\
 
@@ -125,7 +124,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getMaxResponse
 **Return** `data` (total number of students)
 
 ### get_Gender()
----
 
 Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=gender"`\
 
@@ -135,7 +133,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` +
 **Return** `data` (students participate in evaluation), `Chart_Gender(data)`
 
 ### Chart_Gender(data)
----
 
 **Parameter:** 
 + data from get_Gender()
@@ -143,7 +140,6 @@ Send `GET Request` with `"/Questionnaire/api/questionnaire?action=getCounts&"` +
 **Return** `Chart visualization on HTML` by accessing the gender's unique ID
 
 ### get_Question(question_i)
----
 
 Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"` + `value` + `"q=question_i"`\
 **Parameter:** 
@@ -152,7 +148,6 @@ Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Return** `data`, `Chart_Questions(i,data)` 
 
 ### Chart_Question(question_i,data)
----
 
 **Parameter:**
 + question_i (loop 18 times for 18 questions)
@@ -161,7 +156,6 @@ Send **GET Request** with `"/Questionnaire/api/questionnaire?action=getCounts&"`
 **Return** `Chart visualization on HTML` by accessing the question's unique ID
 
 ### Chart_Total()
----
 
 Access data from get_Question(i) and sum all data for 18 questions
 
@@ -278,8 +272,7 @@ Access data from get_Question(i) and sum all data for 18 questions
 - Upon successful submission (i.e. answering every question and pressing `Submit` button), an alert box telling the user that the form has been "Submitted" will appear.
 - If the user leave any question unanswered then pressing the `Submit` button, an alert box with the following message will appear: `"Please select an option for every question."`
 - If there's any unexpected error, an alert box `"Error when submitting, please try again."` will appear.
-<br><br><br>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## getClassOptions.js
 
 ## Notice:
